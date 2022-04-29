@@ -21,38 +21,21 @@ export default function App() {
         })();
     }, []);
 
-    // useEffect(() => {
-    //     let abort = false;
-    //     const filteredPuzzle = puzzle.filter((v, k) => k !== 0);
-    //     if (!abort) {
-    //         setFilteredPuzzle(filteredPuzzle);
-    //     }
+    const handleSubmit = (e) => {
+        const {guess} = values;
+        e.preventDefault();
+        for (let i = 0; i < filteredPuzzle.length; i++) {
+            if (guess === filteredPuzzle[i].Content) {
+                console.log("Match!");
+            } else {
+                console.log("No match");
+            }
+        }
+    };
 
-    //     return () => {
-    //         abort = true;
-    //     };
-    // }, [puzzle]);
-
-    // console.log("puzzle object: ", puzzle?.lead_paragraph.split(" "));
-
-    // console.log("puzzle array: ", arr);
-
-    // if (puzzle) {
-    //     setPuzzleObj(puzzle?.lead_paragraph.split(" "));
-    // }
-
-    // arr.content = arr.
-    // setPuzzleObj(puzzle?.lead_paragraph.split(" "));
-
-    // const handleSubmit = (e) => {
-    //     console.log("values: ", values);
-    //     e.preventDefault();
-    //     if (values === ) {
-
-    //     })
-    // };
     puzzle && console.log("Puzzle: ", puzzle[0].headline);
-    filteredPuzzle && console.log("Filtered Puzzle: ", filteredPuzzle);
+    filteredPuzzle &&
+        console.log("Filtered Puzzle: ", filteredPuzzle[0].Content);
 
     return (
         <div>
@@ -61,13 +44,20 @@ export default function App() {
                     <h1>{puzzle[0].headline}</h1>
                     <div>
                         {filteredPuzzle?.map((data, index) => {
-                            return <div key={index}>{data.content}</div>;
+                            return (
+                                <span key={index}>{`${data.Content} `}</span>
+                            );
                         })}
                     </div>
                 </>
             )}
 
-            {/* <input onClick={handleSubmit}>Submit</input> */}
+            <input
+                name="guess"
+                placeholder="Have a guess"
+                onChange={handleChange}
+            ></input>
+            <button onClick={handleSubmit}>Submit</button>
         </div>
     );
 }
