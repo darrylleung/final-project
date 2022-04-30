@@ -63,8 +63,9 @@ function getPuzzleObj() {
     // console.log("stored article: ", newArticle);
     const leadParagraph = newArticle[0]?.lead_paragraph;
     console.log("stored paragraph: ", leadParagraph);
-    
-    const puzzleObj = leadParagraph?.split(" ");
+
+    const puzzleObj = leadParagraph?.split(" "); // this version uses split
+    // const puzzleObj = leadParagraph?.match(/\w+|\s+|[^\s\w]+/g); // this version uses regex
     console.log("puzzle object: ", puzzleObj);
     arr = [...puzzleObj];
     console.log("arr: ", arr);
@@ -82,9 +83,17 @@ function createPuzzle() {
     }));
     newPuzzle.unshift(newArticle[0]);
     console.log("new puzzle: ", newPuzzle);
+
+    for (let i = 0; i < newPuzzle.length; i++) {
+        console.log("Each word length: ", newPuzzle[i].Content);
+        // console.log("new puzzle: ", newPuzzle[3]);
+        // newPuzzle[i].Content.match(/^[.,:!?'"]/)
+        //     ? (newPuzzle[i].Revealed = true)
+        //     : null;
+    }
     return newPuzzle;
 }
-createPuzzle();
+// createPuzzle();
 
 // cron.schedule("* * * * *", () => {
 //     console.log("Updating the article every minutes");
