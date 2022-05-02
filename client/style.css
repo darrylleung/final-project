@@ -2,10 +2,26 @@ body {
     background-color: ghostwhite;
 }
 
-/* span.text {
+span.text {
     visibility: hidden;
+    display: inline;
+}
+
+span.textblock {
+    background-color: black;
+    color: black;
+    display: inline;
 }
 
 span.visible {
     visibility: visible !important;
-} */
+}
+
+.overlay {
+    position: absolute;
+}
+
+span.remove {
+    background-color: transparent;
+    color: transparent;
+}

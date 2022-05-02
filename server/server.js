@@ -81,19 +81,16 @@ function createPuzzle() {
         Revealed: false,
         CharLength: obj.length,
     }));
-    newPuzzle.unshift(newArticle[0]);
-    console.log("new puzzle: ", newPuzzle);
-
     for (let i = 0; i < newPuzzle.length; i++) {
-        console.log("Each word length: ", newPuzzle[i].Content);
-        // console.log("new puzzle: ", newPuzzle[3]);
-        // newPuzzle[i].Content.match(/^[.,:!?'"]/)
-        //     ? (newPuzzle[i].Revealed = true)
-        //     : null;
+        // console.log("Each word length: ", newPuzzle[i].Content);
+        newPuzzle[i].Content.match(/[.,#!$%&;:{}=\-_`~()]/g)
+            ? (newPuzzle[i].Revealed = true)
+            : null;
     }
+
+    newPuzzle.unshift(newArticle[0]);
     return newPuzzle;
 }
-// createPuzzle();
 
 // cron.schedule("* * * * *", () => {
 //     console.log("Updating the article every minutes");
