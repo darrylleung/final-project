@@ -7,83 +7,146 @@ const fs = require("fs");
 const cron = require("node-cron");
 const data = require("../archive.json");
 const newArticle = [data[0]];
+const puzzleData = require("../dailypuzzle.json");
+const dailyPuzzle = [puzzleData[0]];
+const secrets = require("../secrets");
+const cookieSession = require("cookie-session");
+const { compare, hash } = require("./bc");
+const db = require("./db");
+const { sendEmail } = require("./ses");
+const cryptoRandomString = require("crypto-random-string");
+const { DateTime } = require("luxon");
+let arr = [];
 
 app.use(compression());
 
-app.use(express.static(path.join(__dirname, "..", "client", "public")));
+let sessionSecret;
+if (process.env.NODE_ENV == "production") {
+    sessionSecret = process.env.SESSION_SECRET;
+} else {
+    sessionSecret = require("../secrets.json").SESSION_SECRET;
+}
 
-app.get("/data.json", (req, res) => {
-    axios
-        .get(
-            "https://api.nytimes.com/svc/archive/v1/2020/5.json?api-key=XD1JqAs9ADh0tacDW11hYchXnOXeD08s"
-        )
-        .then((response) => {
-            // console.log("response: ", response.data.response.docs);
-            // console.log("first entry: ", nytimesArray[0].web_url);
-
-            // in the future, possibly remove loop altogether and randomly generate an index number, random year, and random month to pull a single new story every 24 hours.
-
-            const nytimesArray = response.data.response.docs;
-            const archive = [];
-
-            for (let i = 4237; i < nytimesArray.length; i++) {
-                let myNewObj = {};
-                myNewObj.web_url = nytimesArray[i].web_url;
-                myNewObj.lead_paragraph = nytimesArray[i].lead_paragraph;
-                myNewObj.headline = nytimesArray[i].headline.main;
-                myNewObj.byline = nytimesArray[i].byline.original;
-                myNewObj.pub_date = nytimesArray[i].pub_date;
-                myNewObj.news_desk = nytimesArray[i].news_desk;
-                myNewObj.section = nytimesArray[i].section_name;
-                archive.push(myNewObj);
-            }
-            // console.log("new archive: ", archive);
-
-            fs.writeFileSync("archive.json", JSON.stringify(archive, null, 4));
-        });
+const cookieSessionMiddleware = cookieSession({
+    secret: sessionSecret,
+    maxAge: 1000 * 60 * 60 * 24 * 90, //maxAge in milliseconds
+    sameSite: true,
 });
 
+app.use(cookieSessionMiddleware);
+
+app.use(express.static(path.join(__dirname, "..", "client", "public")));
+
+cron.schedule(
+    "0 0 0 * * *",
+    () => {
+        console.log("Updated at midnight, Berlin Time!");
+        const randomYear = () => {
+            return Math.floor(Math.random() * (2022 - 1989) + 1989);
+        };
+        const randomMonth = () => {
+            return Math.floor(Math.random() * (12 - 1) + 1);
+        };
+        axios
+            .get(
+                `https://api.nytimes.com/svc/archive/v1/${randomYear()}/${randomMonth()}.json?api-key=${
+                    secrets.API_KEY
+                }`
+            )
+            .then((response) => {
+                // console.log("response: ", response.data.response.docs);
+                console.log("Archive updated");
+
+                // in the future, possibly remove loop altogether and randomly generate an index number, random year, and random month to pull a single new story every 24 hours.
+
+                const nytimesArray = response.data.response.docs;
+                const archive = [];
+
+                for (let i = 0; i < nytimesArray.length; i++) {
+                    let myNewObj = {};
+                    myNewObj.web_url = nytimesArray[i].web_url;
+                    myNewObj.lead_paragraph = nytimesArray[i].lead_paragraph;
+                    myNewObj.headline = nytimesArray[i].headline.main;
+                    myNewObj.byline = nytimesArray[i].byline.original;
+                    myNewObj.pub_date = nytimesArray[i].pub_date;
+                    myNewObj.news_desk = nytimesArray[i].news_desk;
+                    myNewObj.section = nytimesArray[i].section_name;
+                    archive.push(myNewObj);
+                }
+
+                fs.writeFileSync(
+                    "archive.json",
+                    JSON.stringify(archive, null, 4)
+                );
+
+                dailyPuzzle.pop();
+                dailyPuzzle.push(createPuzzle());
+
+                fs.writeFileSync(
+                    "dailypuzzle.json",
+                    JSON.stringify(dailyPuzzle, null, 4)
+                );
+            });
+    },
+    {
+        timezone: "Europe/Berlin",
+    }
+);
+
 app.get("/start", (req, res) => {
-    res.json(createPuzzle());
+    // console.log("daily puzzle: ", dailyPuzzle);
+    res.json(dailyPuzzle[0]);
+    // res.json(createPuzzle());
 });
 
 function getNewArticle() {
     const randomNum = () => {
-        return Math.floor(Math.random() * (111 - 1) + 1);
+        return Math.floor(Math.random() * (data.length - 1) + 1);
     };
     while (newArticle) {
+        const update = () => {
+            let randomEntry = data[randomNum()];
+            if (
+                !randomEntry.lead_paragraph ||
+                randomEntry.lead_paragraph == null ||
+                randomEntry.lead_paragraph.length < 140
+            ) {
+                console.log("criteria failed. update again!");
+                return update(); //run again
+            } else {
+                console.log("update success");
+                console.log("randomEntry: ", randomEntry);
+                return randomEntry;
+            }
+        };
         newArticle.pop();
-        newArticle.push(data[randomNum()]);
-        console.log("new article paragraph after update: ", newArticle);
+        newArticle.push(update());
         return;
     }
 }
-// getNewArticle();
-function getPuzzleObj() {
-    // console.log("stored article: ", newArticle);
-    const leadParagraph = newArticle[0]?.lead_paragraph;
-    console.log("stored paragraph: ", leadParagraph);
 
+function getPuzzleObj() {
+    console.log("new article at puzzle object: ", newArticle);
+    const leadParagraph = newArticle[0]?.lead_paragraph;
     const puzzleObj = leadParagraph?.split(" "); // this version uses split
     // const puzzleObj = leadParagraph?.match(/\w+|\s+|[^\s\w]+/g); // this version uses regex
-    console.log("puzzle object: ", puzzleObj);
     arr = [...puzzleObj];
-    console.log("arr: ", arr);
 }
-// getPuzzleObj();
-let arr = [];
 
 function createPuzzle() {
     getNewArticle();
     getPuzzleObj();
+    let id = 0;
     const newPuzzle = arr.map((obj) => ({
         Content: obj,
+        id: id++,
         Revealed: false,
         CharLength: obj.length,
     }));
     for (let i = 0; i < newPuzzle.length; i++) {
         // console.log("Each word length: ", newPuzzle[i].Content);
-        newPuzzle[i].Content.match(/[.,#!$%&;:{}=\-_`~()]/g)
+        newPuzzle[i].Content.match(/[.,\/#!$%\^&\*;:{}=\-_'"`~()]/g) ||
+        typeof newPuzzle[i].Content === "number"
             ? (newPuzzle[i].Revealed = true)
             : null;
     }
@@ -91,10 +154,6 @@ function createPuzzle() {
     newPuzzle.unshift(newArticle[0]);
     return newPuzzle;
 }
-
-// cron.schedule("* * * * *", () => {
-//     console.log("Updating the article every minutes");
-// });
 
 // do something with data and then store it in db
 // routes to call and receive from db data

@@ -1,0 +1,247 @@
+[
+    [
+        {
+            "web_url": "https://www.nytimes.com/2001/08/11/obituaries/joanne-minnich-58-a-subject-of-extraordinary-heart-surgery-dies.html",
+            "lead_paragraph": " Joanne Minnich, whose heart was cut out last November for removal of a cancer and then returned in an extraordinary operation that drew widespread attention, died on Thursday at her home in Mahopac, N.Y. She was 58. ",
+            "headline": "Joanne Minnich, 58, a Subject of Extraordinary Heart Surgery, Dies",
+            "byline": "By Lawrence K. Altman",
+            "pub_date": "2001-08-11T05:00:00+0000",
+            "news_desk": "Obituaries",
+            "section": "Obituaries"
+        },
+        {
+            "Content": "",
+            "id": 0,
+            "Revealed": false,
+            "CharLength": 0
+        },
+        {
+            "Content": "Joanne",
+            "id": 1,
+            "Revealed": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "Minnich,",
+            "id": 2,
+            "Revealed": true,
+            "CharLength": 8
+        },
+        {
+            "Content": "whose",
+            "id": 3,
+            "Revealed": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "heart",
+            "id": 4,
+            "Revealed": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "was",
+            "id": 5,
+            "Revealed": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "cut",
+            "id": 6,
+            "Revealed": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "out",
+            "id": 7,
+            "Revealed": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "last",
+            "id": 8,
+            "Revealed": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "November",
+            "id": 9,
+            "Revealed": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "for",
+            "id": 10,
+            "Revealed": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "removal",
+            "id": 11,
+            "Revealed": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "of",
+            "id": 12,
+            "Revealed": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "a",
+            "id": 13,
+            "Revealed": false,
+            "CharLength": 1
+        },
+        {
+            "Content": "cancer",
+            "id": 14,
+            "Revealed": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "and",
+            "id": 15,
+            "Revealed": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "then",
+            "id": 16,
+            "Revealed": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "returned",
+            "id": 17,
+            "Revealed": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "in",
+            "id": 18,
+            "Revealed": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "an",
+            "id": 19,
+            "Revealed": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "extraordinary",
+            "id": 20,
+            "Revealed": false,
+            "CharLength": 13
+        },
+        {
+            "Content": "operation",
+            "id": 21,
+            "Revealed": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "that",
+            "id": 22,
+            "Revealed": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "drew",
+            "id": 23,
+            "Revealed": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "widespread",
+            "id": 24,
+            "Revealed": false,
+            "CharLength": 10
+        },
+        {
+            "Content": "attention,",
+            "id": 25,
+            "Revealed": true,
+            "CharLength": 10
+        },
+        {
+            "Content": "died",
+            "id": 26,
+            "Revealed": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "on",
+            "id": 27,
+            "Revealed": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "Thursday",
+            "id": 28,
+            "Revealed": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "at",
+            "id": 29,
+            "Revealed": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "her",
+            "id": 30,
+            "Revealed": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "home",
+            "id": 31,
+            "Revealed": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "in",
+            "id": 32,
+            "Revealed": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "Mahopac,",
+            "id": 33,
+            "Revealed": true,
+            "CharLength": 8
+        },
+        {
+            "Content": "N.Y.",
+            "id": 34,
+            "Revealed": true,
+            "CharLength": 4
+        },
+        {
+            "Content": "She",
+            "id": 35,
+            "Revealed": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "was",
+            "id": 36,
+            "Revealed": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "58.",
+            "id": 37,
+            "Revealed": true,
+            "CharLength": 3
+        },
+        {
+            "Content": "",
+            "id": 38,
+            "Revealed": false,
+            "CharLength": 0
+        }
+    ]
+]
