@@ -1,11 +1,12 @@
 body {
     margin: 0;
     background-color: rgb(255, 255, 255);
-    font-size: 14pt;
+    font-size: 18pt;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 div.appContainer {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +21,7 @@ div.header {
     top: 0;
     width: 100%;
     height: 100px;
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
 }
 
 span.title {
@@ -59,12 +60,12 @@ div.puzzleContainer {
     display: flex;
     justify-content: center;
     width: 60%;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 div.inputs {
     position: relative;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 div.guesses {
@@ -106,6 +107,7 @@ span.headline {
 
 span.text {
     display: inline;
+    line-height: 1.5;
 }
 
 span.guesses {
@@ -122,6 +124,7 @@ span.redaction {
     background-color: black;
     color: black;
     display: inline;
+    line-height: 1.5;
 }
 
 span.visible {
@@ -147,10 +150,36 @@ div.scorecard {
     width: 65%;
     height: 65%;
     background-color: white;
-    z-index: 200;
+    z-index: 300;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+div.scoreContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+div.scoreGuesses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+div.scoreHints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+div.metadata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
 }
 
 button.submit {
@@ -176,4 +205,57 @@ button.hint {
 
 button:active {
     transform: translateY(2px);
+}
+
+div.menuButtonContainer {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+img.menuButton {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+}
+
+div.menu {
+    position: absolute;
+    z-index: 300;
+    right: -350px;
+    height: 100%;
+    width: 285px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showMenu {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: translateX(-350px);
+}
+
+.closeMenu {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: translateX(350px);
+}
+
+div.menuOverlay {
+    position: absolute;
+    z-index: 299;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+a.nyt-branding {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
 }

@@ -99,6 +99,12 @@ app.get("/start", (req, res) => {
     // res.json(createPuzzle());
 });
 
+app.get("/user/id", (req, res) => {
+    res.json({ userId: req.session.userId });
+});
+
+
+
 function getNewArticle() {
     const randomNum = () => {
         return Math.floor(Math.random() * (data.length - 1) + 1);
@@ -141,6 +147,7 @@ function createPuzzle() {
         Content: obj,
         id: id++,
         Revealed: false,
+        Hint: false,
         CharLength: obj.length,
     }));
     for (let i = 0; i < newPuzzle.length; i++) {

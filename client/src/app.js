@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { loadGameState } from "./redux/game-state/slice";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import Puzzle from "./puzzle";
+import MenuButton from "./menu";
 
 export default function App() {
     const dispatch = useDispatch();
@@ -9,10 +12,14 @@ export default function App() {
     const [guesses, setGuesses] = useState([]);
     const [values, setValues] = useState();
     const [searchTerm, setSearchterm] = useState("");
-    const [hints, setHints] = useState();
+    const [hints, setHints] = useState([]);
     const [unrevealedWords, setUnrevealedWords] = useState();
+    const [numOfGuesses, setNumOfGuesses] = useState([]);
+    const [numOfHints, setNumOfHints] = useState([]);
     const [scorecard, setScorecard] = useState(false);
     const [correctGuesses, setCorrectGuesses] = useState([]);
+    const [menuIsVisible, setMenuIsVisible] = useState(false);
+    const textInput = useRef();
 
     useEffect(() => {
         (async () => {
@@ -26,6 +33,25 @@ export default function App() {
             setUnrevealedWords(
                 data.filter((obj, index) => index !== 0 && !obj.Revealed)
             );
+            setNumOfHints(
+                data.filter((obj, index) => index !== 0 && !obj.Revealed)
+            );
+        })();
+    }, []);
+
+    numOfHints && console.log("num of hints: ", numOfHints.length);
+
+    useEffect(() => {
+        (async () => {
+            const res = await fetch("/user/id");
+            const data = await res.json();
+            const { userId } = data;
+            console.log("data received from /user/id", data);
+            if (!userId) {
+                console.log("no data sent");
+            } else {
+                console.log("received something!");
+            }
         })();
     }, []);
 
@@ -41,7 +67,9 @@ export default function App() {
         let { guess } = values;
         e.preventDefault();
         for (let i = 0; i < filteredPuzzle.length; i++) {
-            if (guess === filteredPuzzle[i].Content) {
+            if (
+                guess.toUpperCase() === filteredPuzzle[i].Content.toUpperCase()
+            ) {
                 console.log("Match!");
                 let puzzleCopy = [...filteredPuzzle];
                 puzzleCopy[
@@ -58,6 +86,11 @@ export default function App() {
                         filteredPuzzle[i].Content,
                     ];
                 }
+                let newGuesses = [...numOfGuesses];
+                if (!newGuesses.includes(guess.toUpperCase())) {
+                    newGuesses = [...numOfGuesses, guess.toUpperCase()];
+                }
+                setNumOfGuesses(newGuesses);
                 setCorrectGuesses(newCorrectGuesses);
                 setUnrevealedWords(newUnrevealed);
                 setFilteredPuzzle(puzzleCopy);
@@ -67,6 +100,11 @@ export default function App() {
                 if (!newIncorrectGuesses.includes(guess)) {
                     newIncorrectGuesses = [...guesses, guess];
                 }
+                let newGuesses = [...numOfGuesses];
+                if (!newGuesses.includes(guess.toUpperCase())) {
+                    newGuesses = [...numOfGuesses, guess.toUpperCase()];
+                }
+                setNumOfGuesses(newGuesses);
                 setGuesses(newIncorrectGuesses);
             }
         }
@@ -75,6 +113,7 @@ export default function App() {
             setScorecard(true);
         }
 
+        textInput.current.focus();
         setSearchterm("");
     };
 
@@ -101,111 +140,104 @@ export default function App() {
             newHint[randomNum.id].Revealed = true;
         }
 
+        // let hintCount = [...numOfHints, randomNum];
+
+        // setNumOfHints(newUnrevealed);
         setUnrevealedWords(newUnrevealed);
         setHints(newHint);
+        textInput.current.focus();
 
         if (filteredPuzzle.every((obj) => obj.Revealed)) {
             setScorecard(true);
         }
     };
 
+    const showMenu = () => {
+        if (!menuIsVisible) {
+            setMenuIsVisible(true);
+        } else {
+            setMenuIsVisible(false);
+        }
+    };
+
     // puzzle && console.log("Puzzle: ", puzzle[0].headline);
     // filteredPuzzle &&
     //     console.log("Filtered Puzzle: ", filteredPuzzle[0].Content);
-    unrevealedWords && console.log("unrevealed words: ", unrevealedWords);
+    // unrevealedWords && console.log("unrevealed words: ", unrevealedWords);
     // correctGuesses && console.log("correct guesses: ", correctGuesses);
+    // correctGuesses &&
+    //     console.log("correct guesses length: ", correctGuesses.length);
+    // numOfGuesses &&
+    //     console.log("number of guesses total: ", numOfGuesses.length);
+    // numOfHints && console.log("number of hints total: ", numOfHints.length);
+    unrevealedWords && console.log("unrevealedwords: ", unrevealedWords.length);
 
     return (
         <div className="appContainer">
-            <div className="header">
-                <span className="title">Redacted</span>
-                <span className="titleOverlay">#######</span>
-            </div>
-            {puzzle && (
-                <>
-                    <div className="headlineContainer">
-                        <span className="headline">{puzzle[0].headline}</span>
+            <BrowserRouter>
+                <div className="header">
+                    <span className="title">Redacted</span>
+                    <span className="titleOverlay">#######</span>
+                    <MenuButton showMenu={showMenu} />
+                </div>
+                <Route exact path="/">
+                    <Puzzle
+                        puzzle={puzzle}
+                        hints={hints}
+                        filteredPuzzle={filteredPuzzle}
+                        handleSubmit={handleSubmit}
+                        searchTerm={searchTerm}
+                        handleChange={handleChange}
+                        handleHint={handleHint}
+                        guesses={guesses}
+                        textInput={textInput}
+                    />
+                </Route>
+                <div
+                    className={`menu ${
+                        menuIsVisible ? "showMenu" : "closeMenu"
+                    }`}
+                >
+                    <div>
+                        <span>Menu</span>
                     </div>
-                    <div className="puzzleContainer">
-                        <div className="overlay">
-                            {hints?.map((data, index) => {
-                                return (
-                                    <span
-                                        className={`redaction ${
-                                            data.Revealed ? "remove" : null
-                                        }`}
-                                        key={index}
-                                    >{`${
-                                        data.CharLength > 1
-                                            ? ` ${data.Content}`
-                                            : ` ${data.Content} `
-                                    }`}</span>
-                                );
-                            })}
-                        </div>
-                        <div name="do you really want to cheat?">
-                            <div name="still time to turn back">
-                                <div name="i'm serious!">
-                                    <div name="last chance!">
-                                        <div
-                                            name="i lied. but this really is the last chance."
-                                            className="puzzleBlock"
-                                        >
-                                            {filteredPuzzle?.map(
-                                                (data, index) => {
-                                                    return (
-                                                        <span
-                                                            className="text"
-                                                            key={index}
-                                                        >{`${
-                                                            data.CharLength > 1
-                                                                ? ` ${data.Content}`
-                                                                : ` ${data.Content} `
-                                                        }`}</span>
-                                                    );
-                                                }
-                                            )}
-                                        </div>
-                                    </div>
+                    <a
+                        href="https://developer.nytimes.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="nyt-branding"
+                    >
+                        <img src="./poweredby_nytimes_200a.png" />
+                    </a>
+                </div>
+                {menuIsVisible && (
+                    <div className="menuOverlay" onClick={showMenu} />
+                )}
+                {scorecard && (
+                    <>
+                        <div className="scorecard">
+                            <h1>Scorecard</h1>
+                            <div className="scoreContainer">
+                                <div className="scoreGuesses">
+                                    <span>Guesses</span>
+                                    <span>{numOfGuesses.length}</span>
+                                </div>
+                                <div className="scoreHints">
+                                    <span>Hints</span>
+                                    <span>{numOfHints.length}</span>
+                                </div>
+                                <div className="metadata">
+                                    <span>{puzzle[0].headline}</span>
+                                    <span>{puzzle[0].byline}</span>
+                                    <a href={`${puzzle[0].web_url}`}>View the story</a>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </>
-            )}
-            <div className="inputs">
-                <form onSubmit={handleSubmit}>
-                    <input
-                        value={searchTerm}
-                        name="guess"
-                        placeholder="Search..."
-                        autoComplete="off"
-                        onChange={handleChange}
-                    />
-                </form>
-                <div className="buttonContainer">
-                    <button className="submit" type="submit">
-                        Submit
-                    </button>
-                    <button className="hint" onClick={handleHint}>
-                        Hint
-                    </button>
-                </div>
-            </div>
-            <div className="guesses">
-                {guesses?.map((data, index) => {
-                    return (
-                        <span className="guesses" key={index}>
-                            {data}
-                        </span>
-                    );
-                })}
-            </div>
-            {scorecard && (
-                <div className="scorecard">
-                    <h1>Scorecard</h1>
-                </div>
-            )}
+                        <div className="menuOverlay" />
+                    </>
+                )}
+            </BrowserRouter>
         </div>
     );
 }
