@@ -9,7 +9,7 @@ const data = require("../archive.json");
 const newArticle = [data[0]];
 const puzzleData = require("../dailypuzzle.json");
 const dailyPuzzle = [puzzleData[0]];
-const secrets = require("../secrets");
+// const secrets = require("../secrets");
 const cookieSession = require("cookie-session");
 const { compare, hash } = require("./bc");
 const db = require("./db");
@@ -57,9 +57,7 @@ cron.schedule(
         };
         axios
             .get(
-                `https://api.nytimes.com/svc/archive/v1/${randomYear()}/${randomMonth()}.json?api-key=${
-                    apiSecret
-                }`
+                `https://api.nytimes.com/svc/archive/v1/${randomYear()}/${randomMonth()}.json?api-key=${apiSecret}`
             )
             .then((response) => {
                 // console.log("response: ", response.data.response.docs);
