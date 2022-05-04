@@ -28,6 +28,13 @@ if (process.env.NODE_ENV == "production") {
     sessionSecret = require("../secrets.json").SESSION_SECRET;
 }
 
+let apiSecret;
+if (process.env.NODE_ENV == "production") {
+    apiSecret = process.env.API_KEY;
+} else {
+    apiSecret = require("../secrets.json").API_KEY;
+}
+
 const cookieSessionMiddleware = cookieSession({
     secret: sessionSecret,
     maxAge: 1000 * 60 * 60 * 24 * 90, //maxAge in milliseconds
@@ -51,7 +58,7 @@ cron.schedule(
         axios
             .get(
                 `https://api.nytimes.com/svc/archive/v1/${randomYear()}/${randomMonth()}.json?api-key=${
-                    secrets.API_KEY
+                    apiSecret
                 }`
             )
             .then((response) => {

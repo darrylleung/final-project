@@ -3,6 +3,7 @@ body {
     background-color: rgb(255, 255, 255);
     font-size: 18pt;
     font-family: Georgia, "Times New Roman", Times, serif;
+    user-select: none;
 }
 
 a {
