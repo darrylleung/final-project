@@ -66,9 +66,10 @@ export default function Puzzle(props) {
                 </>
             )}
             <div className="inputs">
-                <form onSubmit={handleSubmit}>
+                <form className="search" onSubmit={handleSubmit}>
                     <input
                         ref={textInput}
+                        className="guess"
                         value={searchTerm}
                         name="guess"
                         placeholder="Search..."

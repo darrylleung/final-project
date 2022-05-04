@@ -19,6 +19,7 @@ const { DateTime } = require("luxon");
 let arr = [];
 
 app.use(compression());
+app.use(express.json());
 
 let sessionSecret;
 if (process.env.NODE_ENV == "production") {
@@ -93,6 +94,11 @@ cron.schedule(
     }
 );
 
+// BACKUP METHOD TO GENERATE A NEW PUZZLE
+// dailyPuzzle.pop();
+// dailyPuzzle.push(createPuzzle());
+// fs.writeFileSync("dailypuzzle.json", JSON.stringify(dailyPuzzle, null, 4));
+
 app.get("/start", (req, res) => {
     // console.log("daily puzzle: ", dailyPuzzle);
     res.json(dailyPuzzle[0]);
@@ -103,7 +109,66 @@ app.get("/user/id", (req, res) => {
     res.json({ userId: req.session.userId });
 });
 
+app.post("/register", (req, res) => {
+    console.log("req body: ", req.body);
+    const { username, email, password } = req.body;
 
+    hash(password).then((hashedPassword) => {
+        db.registerNewUser(username, email, hashedPassword)
+            .then(({ rows }) => {
+                let userId = rows[0].id;
+                req.session.userId = userId;
+                res.json({ success: true });
+            })
+            .catch((err) => {
+                console.log("err: ", err);
+                res.json({ success: false });
+            });
+    });
+});
+
+app.post("/login", (req, res) => {
+    console.log("req.body: ", req.body);
+    const { email, password } = req.body;
+
+    db.login(email)
+        .then(({ rows }) => {
+            console.log("Result from login: ", rows);
+            let hashedPassword = rows[0].password;
+            let userId = rows[0].id;
+            compare(password, hashedPassword)
+                .then((match) => {
+                    console.log(
+                        "Does the password match the one stored?: ",
+                        match
+                    );
+
+                    if (match) {
+                        req.session.userId = userId;
+                        res.json({ success: true });
+                    } else {
+                        res.json({ success: false });
+                    }
+                })
+                .catch((err) => {
+                    console.log("err: ", err);
+                    res.json({ success: false });
+                });
+        })
+        .catch((err) => {
+            console.log("err: ", err);
+            res.json({ success: false });
+        });
+});
+
+app.get("/leaderboard", (req, res) => {
+    db.retrieveLeaderboard()
+        .then(({ rows }) => {
+            console.log("rows: ", rows);
+            res.json(rows);
+        })
+        .catch((err) => console.log("err: ", err));
+});
 
 function getNewArticle() {
     const randomNum = () => {
@@ -161,6 +226,11 @@ function createPuzzle() {
     newPuzzle.unshift(newArticle[0]);
     return newPuzzle;
 }
+
+app.post("/logout", (req, res) => {
+    req.session = null;
+    res.redirect("/");
+});
 
 // do something with data and then store it in db
 // routes to call and receive from db data

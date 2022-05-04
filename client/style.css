@@ -5,6 +5,10 @@ body {
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+a {
+    color: black;
+}
+
 div.appContainer {
     position: absolute;
     display: flex;
@@ -12,6 +16,7 @@ div.appContainer {
     align-items: center;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 div.header {
@@ -60,46 +65,61 @@ div.puzzleContainer {
     display: flex;
     justify-content: center;
     width: 60%;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 div.inputs {
     position: relative;
-    margin-top: 60px;
+    margin-top: 40px;
+    width: 60%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+form.search {
+    width: max-content;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
 }
 
 div.guesses {
     position: relative;
-    width: 60%;
+    width: 65%;
+    height: 100px;
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    overflow: scroll;
 }
 
-input {
+div.guesses::-webkit-scrollbar {
+    display: none;
+}
+
+input.guess {
     border-top: none;
     border-left: none;
     border-right: none;
     outline: none;
     padding: 20px 20px;
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    font-size: 24pt;
+    width: 400px;
+    font-size: 18pt;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-style: italic;
     background-color: ghostwhite;
 }
 
 div.buttonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    display: inline-block;
+    width: max-content;
+    text-align: center;
+    margin-left: 20px;
 }
 
 span.headline {
-    font-size: 36pt;
+    font-size: 32pt;
     text-align: center;
     font-weight: 600;
     font-style: italic;
@@ -111,11 +131,13 @@ span.text {
 }
 
 span.guesses {
-    display: inline;
+    display: inline-block;
     margin: 5px 5px;
     border: 1px solid black;
     border-radius: 10px;
+    height: 24px;
     padding: 5px 10px;
+    font-size: 14pt !important;
     background-color: black;
     color: white;
 }
@@ -154,6 +176,7 @@ div.scorecard {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 div.scoreContainer {
@@ -174,12 +197,39 @@ div.scoreHints {
     align-items: center;
     width: 25%;
 }
+div.scoreTotal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
 
 div.metadata {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 90%;
+}
+
+div.metadata span.headline {
+    font-size: 24pt;
+}
+
+span.byline {
+    margin-top: 20px;
+}
+
+span.scoreNum {
+    font-size: 48pt;
+    font-weight: 600;
+}
+
+span.score {
+    margin-top: 20px;
+}
+
+a.story {
+    margin-top: 10px;
 }
 
 button.submit {
@@ -188,7 +238,7 @@ button.submit {
     border-radius: 10px;
     padding: 5px 10px;
     font-size: 18pt;
-    margin: 0 5px;
+    margin: 0 5px 0 0;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -199,7 +249,7 @@ button.hint {
     border-radius: 10px;
     padding: 5px 10px;
     font-size: 18pt;
-    margin: 0 5px;
+    margin: 0 0 0 5px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -217,6 +267,7 @@ img.menuButton {
     background-color: transparent;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 div.menu {
@@ -232,6 +283,8 @@ div.menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    user-select: none;
 }
 
 .showMenu {
@@ -246,6 +299,153 @@ div.menu {
     transform: translateX(350px);
 }
 
+input.registration {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    width: 265px;
+    font-size: 14pt;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: ghostwhite;
+}
+
+form.registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.registration {
+    width: 285px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+span.registration {
+    width: 265px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div.register-form {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+div.login {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+}
+
+span.login {
+    width: 265px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input.login {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    width: 265px;
+    font-size: 14pt;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: ghostwhite;
+}
+
+div.login-form {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+button.menu-submit {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14pt;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+div.rules {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.rules-logged-in {
+    width: 285px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+span.rules {
+    width: 265px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div.rules-comp {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.leaderboard {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+}
+
+span.leaderboard {
+    width: 265px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div.leaderboard-comp {
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 div.menuOverlay {
     position: absolute;
     z-index: 299;
@@ -258,4 +458,23 @@ a.nyt-branding {
     position: absolute;
     bottom: 0;
     margin-bottom: 20px;
+}
+
+button.logout {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14pt;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+li {
+    padding: 5px;
+    font-size: 14pt;
+}
+
+span.underconstruction {
+    margin: 40px 0;
+    font-size: 14pt;
 }

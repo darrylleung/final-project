@@ -3,7 +3,9 @@ import { useDispatch } from "react-redux";
 import { loadGameState } from "./redux/game-state/slice";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Puzzle from "./puzzle";
-import MenuButton from "./menu";
+import MenuButton from "./menubutton";
+import Scorecard from "./scorecard";
+import Menu from "./menu";
 
 export default function App() {
     const dispatch = useDispatch();
@@ -16,10 +18,12 @@ export default function App() {
     const [unrevealedWords, setUnrevealedWords] = useState();
     const [numOfGuesses, setNumOfGuesses] = useState([]);
     const [numOfHints, setNumOfHints] = useState([]);
+    const [finalScore, setFinalScore] = useState([]);
     const [scorecard, setScorecard] = useState(false);
     const [correctGuesses, setCorrectGuesses] = useState([]);
     const [menuIsVisible, setMenuIsVisible] = useState(false);
     const textInput = useRef();
+    const score = [];
 
     useEffect(() => {
         (async () => {
@@ -43,15 +47,15 @@ export default function App() {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch("/user/id");
+            const res = await fetch("/leaderboard");
             const data = await res.json();
-            const { userId } = data;
-            console.log("data received from /user/id", data);
-            if (!userId) {
-                console.log("no data sent");
-            } else {
-                console.log("received something!");
-            }
+            // const { username, puzzle_id, score } = data;
+            console.log("data received from /leaderboard", data);
+            // if (!userId) {
+            //     console.log("no data sent");
+            // } else {
+            //     console.log("received something!");
+            // }
         })();
     }, []);
 
@@ -98,7 +102,7 @@ export default function App() {
                 console.log("No match");
                 let newIncorrectGuesses = [...guesses];
                 if (!newIncorrectGuesses.includes(guess)) {
-                    newIncorrectGuesses = [...guesses, guess];
+                    newIncorrectGuesses = [guess, ...guesses];
                 }
                 let newGuesses = [...numOfGuesses];
                 if (!newGuesses.includes(guess.toUpperCase())) {
@@ -148,7 +152,27 @@ export default function App() {
         textInput.current.focus();
 
         if (filteredPuzzle.every((obj) => obj.Revealed)) {
+            setFinalScore(
+                +`${numOfGuesses.length}` + +`${numOfHints.length * 2}`
+            );
+            console.log("finalScore:", finalScore);
             setScorecard(true);
+            //     score.push(finalScore).push(username);
+            //     fetch("/leaderboard", {
+            //         method: "POST",
+            //         headers: {
+            //             "Content-Type": "application/json",
+            //         },
+            //         body: JSON.stringify(values),
+            //     })
+            //         .then((res) => res.json())
+            //         .then((data) => {
+            //             data.success ? location.replace("/") : setError(true);
+            //         })
+            //         .catch((err) => {
+            //             console.log("err with registration or login: ", err);
+            //             setError(true);
+            //         });
         }
     };
 
@@ -158,6 +182,10 @@ export default function App() {
         } else {
             setMenuIsVisible(false);
         }
+    };
+
+    const closeOverlay = () => {
+        setScorecard(false);
     };
 
     // puzzle && console.log("Puzzle: ", puzzle[0].headline);
@@ -193,49 +221,17 @@ export default function App() {
                         textInput={textInput}
                     />
                 </Route>
-                <div
-                    className={`menu ${
-                        menuIsVisible ? "showMenu" : "closeMenu"
-                    }`}
-                >
-                    <div>
-                        <span>Menu</span>
-                    </div>
-                    <a
-                        href="https://developer.nytimes.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="nyt-branding"
-                    >
-                        <img src="./poweredby_nytimes_200a.png" />
-                    </a>
-                </div>
+                <Menu menuIsVisible={menuIsVisible} />
                 {menuIsVisible && (
                     <div className="menuOverlay" onClick={showMenu} />
                 )}
                 {scorecard && (
-                    <>
-                        <div className="scorecard">
-                            <h1>Scorecard</h1>
-                            <div className="scoreContainer">
-                                <div className="scoreGuesses">
-                                    <span>Guesses</span>
-                                    <span>{numOfGuesses.length}</span>
-                                </div>
-                                <div className="scoreHints">
-                                    <span>Hints</span>
-                                    <span>{numOfHints.length}</span>
-                                </div>
-                                <div className="metadata">
-                                    <span>{puzzle[0].headline}</span>
-                                    <span>{puzzle[0].byline}</span>
-                                    <a href={`${puzzle[0].web_url}`}>View the story</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="menuOverlay" />
-                    </>
+                    <Scorecard
+                        puzzle={puzzle}
+                        numOfGuesses={numOfGuesses}
+                        numOfHints={numOfHints}
+                        closeOverlay={closeOverlay}
+                    />
                 )}
             </BrowserRouter>
         </div>

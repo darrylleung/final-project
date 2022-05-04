@@ -1,247 +1,314 @@
 [
     [
         {
-            "web_url": "https://www.nytimes.com/2001/08/11/obituaries/joanne-minnich-58-a-subject-of-extraordinary-heart-surgery-dies.html",
-            "lead_paragraph": " Joanne Minnich, whose heart was cut out last November for removal of a cancer and then returned in an extraordinary operation that drew widespread attention, died on Thursday at her home in Mahopac, N.Y. She was 58. ",
-            "headline": "Joanne Minnich, 58, a Subject of Extraordinary Heart Surgery, Dies",
-            "byline": "By Lawrence K. Altman",
-            "pub_date": "2001-08-11T05:00:00+0000",
-            "news_desk": "Obituaries",
-            "section": "Obituaries"
+            "web_url": "https://www.nytimes.com/2000/08/11/nyregion/man-shot-in-suv-crashes-killing-bystander-then-dies.html",
+            "lead_paragraph": "A man who was shot through the window of his Range Rover outside a downtown nightclub early yesterday managed to drive away but lost control after two blocks, the police said, and struck a Swedish-born director of award-winning television commercials. Both men died.",
+            "headline": "Man Shot in S.U.V. Crashes, Killing Bystander, Then Dies",
+            "byline": "By Elissa Gootman",
+            "pub_date": "2000-08-11T05:00:00+0000",
+            "news_desk": "Metropolitan Desk",
+            "section": "New York"
         },
         {
-            "Content": "",
+            "Content": "A",
             "id": 0,
             "Revealed": false,
-            "CharLength": 0
+            "Hint": false,
+            "CharLength": 1
         },
         {
-            "Content": "Joanne",
+            "Content": "man",
             "id": 1,
             "Revealed": false,
-            "CharLength": 6
+            "Hint": false,
+            "CharLength": 3
         },
         {
-            "Content": "Minnich,",
+            "Content": "who",
             "id": 2,
-            "Revealed": true,
-            "CharLength": 8
-        },
-        {
-            "Content": "whose",
-            "id": 3,
             "Revealed": false,
-            "CharLength": 5
-        },
-        {
-            "Content": "heart",
-            "id": 4,
-            "Revealed": false,
-            "CharLength": 5
+            "Hint": false,
+            "CharLength": 3
         },
         {
             "Content": "was",
-            "id": 5,
+            "id": 3,
             "Revealed": false,
+            "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "cut",
-            "id": 6,
+            "Content": "shot",
+            "id": 4,
             "Revealed": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "out",
-            "id": 7,
-            "Revealed": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "last",
-            "id": 8,
-            "Revealed": false,
+            "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "November",
-            "id": 9,
+            "Content": "through",
+            "id": 5,
             "Revealed": false,
-            "CharLength": 8
-        },
-        {
-            "Content": "for",
-            "id": 10,
-            "Revealed": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "removal",
-            "id": 11,
-            "Revealed": false,
+            "Hint": false,
             "CharLength": 7
         },
         {
+            "Content": "the",
+            "id": 6,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "window",
+            "id": 7,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
             "Content": "of",
+            "id": 8,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "his",
+            "id": 9,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "Range",
+            "id": 10,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "Rover",
+            "id": 11,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "outside",
             "id": 12,
             "Revealed": false,
-            "CharLength": 2
+            "Hint": false,
+            "CharLength": 7
         },
         {
             "Content": "a",
             "id": 13,
             "Revealed": false,
+            "Hint": false,
             "CharLength": 1
         },
         {
-            "Content": "cancer",
+            "Content": "downtown",
             "id": 14,
             "Revealed": false,
-            "CharLength": 6
-        },
-        {
-            "Content": "and",
-            "id": 15,
-            "Revealed": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "then",
-            "id": 16,
-            "Revealed": false,
-            "CharLength": 4
-        },
-        {
-            "Content": "returned",
-            "id": 17,
-            "Revealed": false,
+            "Hint": false,
             "CharLength": 8
         },
         {
-            "Content": "in",
-            "id": 18,
+            "Content": "nightclub",
+            "id": 15,
             "Revealed": false,
-            "CharLength": 2
-        },
-        {
-            "Content": "an",
-            "id": 19,
-            "Revealed": false,
-            "CharLength": 2
-        },
-        {
-            "Content": "extraordinary",
-            "id": 20,
-            "Revealed": false,
-            "CharLength": 13
-        },
-        {
-            "Content": "operation",
-            "id": 21,
-            "Revealed": false,
+            "Hint": false,
             "CharLength": 9
         },
         {
-            "Content": "that",
+            "Content": "early",
+            "id": 16,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "yesterday",
+            "id": 17,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "managed",
+            "id": 18,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "to",
+            "id": 19,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "drive",
+            "id": 20,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "away",
+            "id": 21,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "but",
             "id": 22,
             "Revealed": false,
-            "CharLength": 4
+            "Hint": false,
+            "CharLength": 3
         },
         {
-            "Content": "drew",
+            "Content": "lost",
             "id": 23,
             "Revealed": false,
+            "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "widespread",
+            "Content": "control",
             "id": 24,
             "Revealed": false,
-            "CharLength": 10
+            "Hint": false,
+            "CharLength": 7
         },
         {
-            "Content": "attention,",
+            "Content": "after",
             "id": 25,
-            "Revealed": true,
-            "CharLength": 10
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
         },
         {
-            "Content": "died",
+            "Content": "two",
             "id": 26,
             "Revealed": false,
-            "CharLength": 4
+            "Hint": false,
+            "CharLength": 3
         },
         {
-            "Content": "on",
+            "Content": "blocks,",
             "id": 27,
-            "Revealed": false,
-            "CharLength": 2
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 7
         },
         {
-            "Content": "Thursday",
+            "Content": "the",
             "id": 28,
             "Revealed": false,
-            "CharLength": 8
+            "Hint": false,
+            "CharLength": 3
         },
         {
-            "Content": "at",
+            "Content": "police",
             "id": 29,
             "Revealed": false,
-            "CharLength": 2
+            "Hint": false,
+            "CharLength": 6
         },
         {
-            "Content": "her",
+            "Content": "said,",
             "id": 30,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "and",
+            "id": 31,
             "Revealed": false,
+            "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "home",
-            "id": 31,
-            "Revealed": false,
-            "CharLength": 4
-        },
-        {
-            "Content": "in",
+            "Content": "struck",
             "id": 32,
             "Revealed": false,
-            "CharLength": 2
+            "Hint": false,
+            "CharLength": 6
         },
         {
-            "Content": "Mahopac,",
+            "Content": "a",
             "id": 33,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 1
+        },
+        {
+            "Content": "Swedish-born",
+            "id": 34,
             "Revealed": true,
+            "Hint": false,
+            "CharLength": 12
+        },
+        {
+            "Content": "director",
+            "id": 35,
+            "Revealed": false,
+            "Hint": false,
             "CharLength": 8
         },
         {
-            "Content": "N.Y.",
-            "id": 34,
+            "Content": "of",
+            "id": 36,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "award-winning",
+            "id": 37,
             "Revealed": true,
+            "Hint": false,
+            "CharLength": 13
+        },
+        {
+            "Content": "television",
+            "id": 38,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 10
+        },
+        {
+            "Content": "commercials.",
+            "id": 39,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 12
+        },
+        {
+            "Content": "Both",
+            "id": 40,
+            "Revealed": false,
+            "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "She",
-            "id": 35,
+            "Content": "men",
+            "id": 41,
             "Revealed": false,
+            "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "was",
-            "id": 36,
-            "Revealed": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "58.",
-            "id": 37,
+            "Content": "died.",
+            "id": 42,
             "Revealed": true,
-            "CharLength": 3
-        },
-        {
-            "Content": "",
-            "id": 38,
-            "Revealed": false,
-            "CharLength": 0
+            "Hint": false,
+            "CharLength": 5
         }
     ]
 ]
