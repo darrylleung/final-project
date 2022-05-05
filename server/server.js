@@ -99,7 +99,10 @@ cron.schedule(
     }
 );
 
+
 // BACKUP METHOD TO GENERATE A NEW PUZZLE
+
+
 // dailyPuzzle.pop();
 // dailyPuzzle.push(createPuzzle());
 // fs.writeFileSync("dailypuzzle.json", JSON.stringify(dailyPuzzle, null, 4));
