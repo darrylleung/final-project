@@ -1,314 +1,804 @@
 [
     [
         {
-            "web_url": "https://www.nytimes.com/2000/08/11/nyregion/man-shot-in-suv-crashes-killing-bystander-then-dies.html",
-            "lead_paragraph": "A man who was shot through the window of his Range Rover outside a downtown nightclub early yesterday managed to drive away but lost control after two blocks, the police said, and struck a Swedish-born director of award-winning television commercials. Both men died.",
-            "headline": "Man Shot in S.U.V. Crashes, Killing Bystander, Then Dies",
-            "byline": "By Elissa Gootman",
-            "pub_date": "2000-08-11T05:00:00+0000",
-            "news_desk": "Metropolitan Desk",
-            "section": "New York"
+            "web_url": "https://www.nytimes.com/2000/08/17/garden/currents-touring-provence-a-ceramic-renaissance-for-a-town-that-potters-made.html",
+            "lead_paragraph": "The town of St.-Quentin la Poterie gets its name from the potters, as many as 80 in the 1800's, who set up factories there because of the excellent local clay. When plastic arrived, that industry disappeared -- until Charles Eissautier opened shop in 1983, bringing artisanal pottery back to St.-Quentin. Modern and traditional crockery, decorative objects, outdoor planters, glazed and unglazed, every piece is handmade. The planters are frost-resistant and will not crack in cold winters. Prices go from $7 for a pot 4 1/2 inches high to $215 for a 17 1/2-inch pot like the one above, plus shipping: www.Raison-de-Plus.fr or (011) 33-4-66-22-58-70, La Poterie Eissautier, 371, route d'Uzes, St.-Quentin la Poterie.",
+            "headline": "A Ceramic Renaissance For a Town That Potters Made",
+            "byline": "By Mallery Lane",
+            "pub_date": "2000-08-17T05:00:00+0000",
+            "news_desk": "House & Home/Style Desk",
+            "section": "Home & Garden"
         },
         {
-            "Content": "A",
+            "Content": "The",
             "id": 0,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 1
+            "CharLength": 3
         },
         {
-            "Content": "man",
+            "Content": "town",
             "id": 1,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "who",
-            "id": 2,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "was",
-            "id": 3,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "shot",
-            "id": 4,
             "Revealed": false,
             "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "through",
+            "Content": "of",
+            "id": 2,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "St.-Quentin",
+            "id": 3,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 11
+        },
+        {
+            "Content": "la",
+            "id": 4,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "Poterie",
             "id": 5,
             "Revealed": false,
             "Hint": false,
             "CharLength": 7
         },
         {
-            "Content": "the",
+            "Content": "gets",
             "id": 6,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 3
+            "CharLength": 4
         },
         {
-            "Content": "window",
+            "Content": "its",
             "id": 7,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 6
+            "CharLength": 3
         },
         {
-            "Content": "of",
+            "Content": "name",
             "id": 8,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 2
+            "CharLength": 4
         },
         {
-            "Content": "his",
+            "Content": "from",
             "id": 9,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "the",
+            "id": 10,
             "Revealed": false,
             "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "Range",
-            "id": 10,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 5
-        },
-        {
-            "Content": "Rover",
+            "Content": "potters,",
             "id": 11,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 5
-        },
-        {
-            "Content": "outside",
-            "id": 12,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 7
-        },
-        {
-            "Content": "a",
-            "id": 13,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 1
-        },
-        {
-            "Content": "downtown",
-            "id": 14,
-            "Revealed": false,
+            "Revealed": true,
             "Hint": false,
             "CharLength": 8
         },
         {
-            "Content": "nightclub",
-            "id": 15,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 9
-        },
-        {
-            "Content": "early",
-            "id": 16,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 5
-        },
-        {
-            "Content": "yesterday",
-            "id": 17,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 9
-        },
-        {
-            "Content": "managed",
-            "id": 18,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 7
-        },
-        {
-            "Content": "to",
-            "id": 19,
+            "Content": "as",
+            "id": 12,
             "Revealed": false,
             "Hint": false,
             "CharLength": 2
         },
         {
-            "Content": "drive",
-            "id": 20,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 5
-        },
-        {
-            "Content": "away",
-            "id": 21,
+            "Content": "many",
+            "id": 13,
             "Revealed": false,
             "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "but",
-            "id": 22,
+            "Content": "as",
+            "id": 14,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "80",
+            "id": 15,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "in",
+            "id": 16,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "the",
+            "id": 17,
             "Revealed": false,
             "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "lost",
+            "Content": "1800's,",
+            "id": 18,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "who",
+            "id": 19,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "set",
+            "id": 20,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "up",
+            "id": 21,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "factories",
+            "id": 22,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "there",
             "id": 23,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 4
+            "CharLength": 5
         },
         {
-            "Content": "control",
+            "Content": "because",
             "id": 24,
             "Revealed": false,
             "Hint": false,
             "CharLength": 7
         },
         {
-            "Content": "after",
+            "Content": "of",
             "id": 25,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 5
+            "CharLength": 2
         },
         {
-            "Content": "two",
+            "Content": "the",
             "id": 26,
             "Revealed": false,
             "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "blocks,",
+            "Content": "excellent",
             "id": 27,
-            "Revealed": true,
+            "Revealed": false,
             "Hint": false,
-            "CharLength": 7
+            "CharLength": 9
         },
         {
-            "Content": "the",
+            "Content": "local",
             "id": 28,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 3
+            "CharLength": 5
         },
         {
-            "Content": "police",
+            "Content": "clay.",
             "id": 29,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 6
-        },
-        {
-            "Content": "said,",
-            "id": 30,
             "Revealed": true,
             "Hint": false,
             "CharLength": 5
         },
         {
-            "Content": "and",
-            "id": 31,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "struck",
-            "id": 32,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 6
-        },
-        {
-            "Content": "a",
-            "id": 33,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 1
-        },
-        {
-            "Content": "Swedish-born",
-            "id": 34,
-            "Revealed": true,
-            "Hint": false,
-            "CharLength": 12
-        },
-        {
-            "Content": "director",
-            "id": 35,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 8
-        },
-        {
-            "Content": "of",
-            "id": 36,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 2
-        },
-        {
-            "Content": "award-winning",
-            "id": 37,
-            "Revealed": true,
-            "Hint": false,
-            "CharLength": 13
-        },
-        {
-            "Content": "television",
-            "id": 38,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 10
-        },
-        {
-            "Content": "commercials.",
-            "id": 39,
-            "Revealed": true,
-            "Hint": false,
-            "CharLength": 12
-        },
-        {
-            "Content": "Both",
-            "id": 40,
+            "Content": "When",
+            "id": 30,
             "Revealed": false,
             "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "men",
+            "Content": "plastic",
+            "id": 31,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "arrived,",
+            "id": 32,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "that",
+            "id": 33,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "industry",
+            "id": 34,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "disappeared",
+            "id": 35,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 11
+        },
+        {
+            "Content": "--",
+            "id": 36,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "until",
+            "id": 37,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "Charles",
+            "id": 38,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "Eissautier",
+            "id": 39,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 10
+        },
+        {
+            "Content": "opened",
+            "id": 40,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "shop",
             "id": 41,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "in",
+            "id": 42,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "1983,",
+            "id": 43,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "bringing",
+            "id": 44,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "artisanal",
+            "id": 45,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "pottery",
+            "id": 46,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "back",
+            "id": 47,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "to",
+            "id": 48,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "St.-Quentin.",
+            "id": 49,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 12
+        },
+        {
+            "Content": "Modern",
+            "id": 50,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "and",
+            "id": 51,
             "Revealed": false,
             "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "died.",
-            "id": 42,
+            "Content": "traditional",
+            "id": 52,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 11
+        },
+        {
+            "Content": "crockery,",
+            "id": 53,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "decorative",
+            "id": 54,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 10
+        },
+        {
+            "Content": "objects,",
+            "id": 55,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "outdoor",
+            "id": 56,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "planters,",
+            "id": 57,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "glazed",
+            "id": 58,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "and",
+            "id": 59,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "unglazed,",
+            "id": 60,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "every",
+            "id": 61,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "piece",
+            "id": 62,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "is",
+            "id": 63,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "handmade.",
+            "id": 64,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "The",
+            "id": 65,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "planters",
+            "id": 66,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "are",
+            "id": 67,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "frost-resistant",
+            "id": 68,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 15
+        },
+        {
+            "Content": "and",
+            "id": 69,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "will",
+            "id": 70,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "not",
+            "id": 71,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "crack",
+            "id": 72,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "in",
+            "id": 73,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "cold",
+            "id": 74,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "winters.",
+            "id": 75,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "Prices",
+            "id": 76,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "go",
+            "id": 77,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "from",
+            "id": 78,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "$7",
+            "id": 79,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "for",
+            "id": 80,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "a",
+            "id": 81,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 1
+        },
+        {
+            "Content": "pot",
+            "id": 82,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "4",
+            "id": 83,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 1
+        },
+        {
+            "Content": "1/2",
+            "id": 84,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "inches",
+            "id": 85,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "high",
+            "id": 86,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "to",
+            "id": 87,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "$215",
+            "id": 88,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "for",
+            "id": 89,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "a",
+            "id": 90,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 1
+        },
+        {
+            "Content": "17",
+            "id": 91,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "1/2-inch",
+            "id": 92,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "pot",
+            "id": 93,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "like",
+            "id": 94,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "the",
+            "id": 95,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "one",
+            "id": 96,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "above,",
+            "id": 97,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "plus",
+            "id": 98,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "shipping:",
+            "id": 99,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "www.Raison-de-Plus.fr",
+            "id": 100,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 21
+        },
+        {
+            "Content": "or",
+            "id": 101,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "(011)",
+            "id": 102,
             "Revealed": true,
             "Hint": false,
             "CharLength": 5
+        },
+        {
+            "Content": "33-4-66-22-58-70,",
+            "id": 103,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 17
+        },
+        {
+            "Content": "La",
+            "id": 104,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "Poterie",
+            "id": 105,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "Eissautier,",
+            "id": 106,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 11
+        },
+        {
+            "Content": "371,",
+            "id": 107,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "route",
+            "id": 108,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "d'Uzes,",
+            "id": 109,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "St.-Quentin",
+            "id": 110,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 11
+        },
+        {
+            "Content": "la",
+            "id": 111,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "Poterie.",
+            "id": 112,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 8
         }
     ]
 ]
