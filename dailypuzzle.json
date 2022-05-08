@@ -1,286 +1,328 @@
 [
     [
         {
-            "web_url": "https://www.nytimes.com/1997/08/22/business/caffeinated-drinks-catering-to-excitable-boys-and-girls.html",
-            "lead_paragraph": "They can get you ''high'' or give you a quick ''lift.'' Some people just want them for the ''buzz'' or the sheer pleasure of getting a ''rush,'' while others are lured by the possibility of heightening their sexual drive.",
-            "headline": "Caffeinated Drinks Catering to Excitable Boys and Girls",
-            "byline": "By David Barboza",
-            "pub_date": "1997-08-22T05:00:00+0000",
-            "news_desk": "Business/Financial Desk",
-            "section": "Business Day"
+            "web_url": "https://www.nytimes.com/1997/08/18/nyregion/rescue-boat-kills-woman-thrown-in-water-by-storm.html",
+            "lead_paragraph": "A Long Island couple who were new to sailing went overboard when their boat capsized in a sudden squall Saturday evening, and the woman was killed when a powerboat speeding to the rescue caught her in the 22-inch blades of its propeller, the police said.",
+            "headline": "Rescue Boat Kills Woman Thrown in Water by Storm",
+            "byline": "By David M. Halbfinger",
+            "pub_date": "1997-08-18T05:00:00+0000",
+            "news_desk": "Metropolitan Desk",
+            "section": "New York"
         },
         {
-            "Content": "They",
+            "Content": "A",
             "id": 0,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 4
-        },
-        {
-            "Content": "can",
-            "id": 1,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "get",
-            "id": 2,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "you",
-            "id": 3,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "''high''",
-            "id": 4,
-            "Revealed": true,
-            "Hint": false,
-            "CharLength": 8
-        },
-        {
-            "Content": "or",
-            "id": 5,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 2
-        },
-        {
-            "Content": "give",
-            "id": 6,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 4
-        },
-        {
-            "Content": "you",
-            "id": 7,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "a",
-            "id": 8,
             "Revealed": false,
             "Hint": false,
             "CharLength": 1
         },
         {
-            "Content": "quick",
+            "Content": "Long",
+            "id": 1,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "Island",
+            "id": 2,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "couple",
+            "id": 3,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "who",
+            "id": 4,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "were",
+            "id": 5,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "new",
+            "id": 6,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "to",
+            "id": 7,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "sailing",
+            "id": 8,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "went",
             "id": 9,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 5
+            "CharLength": 4
         },
         {
-            "Content": "''lift.''",
+            "Content": "overboard",
             "id": 10,
-            "Revealed": true,
+            "Revealed": false,
             "Hint": false,
             "CharLength": 9
         },
         {
-            "Content": "Some",
+            "Content": "when",
             "id": 11,
             "Revealed": false,
             "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "people",
+            "Content": "their",
             "id": 12,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 6
+            "CharLength": 5
         },
         {
-            "Content": "just",
+            "Content": "boat",
             "id": 13,
             "Revealed": false,
             "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "want",
+            "Content": "capsized",
             "id": 14,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 4
+            "CharLength": 8
         },
         {
-            "Content": "them",
+            "Content": "in",
             "id": 15,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 4
-        },
-        {
-            "Content": "for",
-            "id": 16,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "the",
-            "id": 17,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "''buzz''",
-            "id": 18,
-            "Revealed": true,
-            "Hint": false,
-            "CharLength": 8
-        },
-        {
-            "Content": "or",
-            "id": 19,
-            "Revealed": false,
-            "Hint": false,
             "CharLength": 2
-        },
-        {
-            "Content": "the",
-            "id": 20,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "sheer",
-            "id": 21,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 5
-        },
-        {
-            "Content": "pleasure",
-            "id": 22,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 8
-        },
-        {
-            "Content": "of",
-            "id": 23,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 2
-        },
-        {
-            "Content": "getting",
-            "id": 24,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 7
         },
         {
             "Content": "a",
-            "id": 25,
+            "id": 16,
             "Revealed": false,
             "Hint": false,
             "CharLength": 1
         },
         {
-            "Content": "''rush,''",
-            "id": 26,
-            "Revealed": true,
-            "Hint": false,
-            "CharLength": 9
-        },
-        {
-            "Content": "while",
-            "id": 27,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 5
-        },
-        {
-            "Content": "others",
-            "id": 28,
+            "Content": "sudden",
+            "id": 17,
             "Revealed": false,
             "Hint": false,
             "CharLength": 6
         },
         {
-            "Content": "are",
-            "id": 29,
+            "Content": "squall",
+            "id": 18,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "Saturday",
+            "id": 19,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "evening,",
+            "id": 20,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "and",
+            "id": 21,
             "Revealed": false,
             "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "lured",
-            "id": 30,
+            "Content": "the",
+            "id": 22,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "woman",
+            "id": 23,
             "Revealed": false,
             "Hint": false,
             "CharLength": 5
         },
         {
-            "Content": "by",
-            "id": 31,
+            "Content": "was",
+            "id": 24,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "killed",
+            "id": 25,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "when",
+            "id": 26,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "a",
+            "id": 27,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 1
+        },
+        {
+            "Content": "powerboat",
+            "id": 28,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "speeding",
+            "id": 29,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "to",
+            "id": 30,
             "Revealed": false,
             "Hint": false,
             "CharLength": 2
         },
         {
             "Content": "the",
-            "id": 32,
+            "id": 31,
             "Revealed": false,
             "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "possibility",
+            "Content": "rescue",
+            "id": 32,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "caught",
             "id": 33,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 11
+            "CharLength": 6
         },
         {
-            "Content": "of",
+            "Content": "her",
             "id": 34,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "in",
+            "id": 35,
             "Revealed": false,
             "Hint": false,
             "CharLength": 2
         },
         {
-            "Content": "heightening",
-            "id": 35,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 11
-        },
-        {
-            "Content": "their",
+            "Content": "the",
             "id": 36,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 5
+            "CharLength": 3
         },
         {
-            "Content": "sexual",
+            "Content": "22-inch",
             "id": 37,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "blades",
+            "id": 38,
             "Revealed": false,
             "Hint": false,
             "CharLength": 6
         },
         {
-            "Content": "drive.",
-            "id": 38,
+            "Content": "of",
+            "id": 39,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "its",
+            "id": 40,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "propeller,",
+            "id": 41,
             "Revealed": true,
             "Hint": false,
+            "CharLength": 10
+        },
+        {
+            "Content": "the",
+            "id": 42,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "police",
+            "id": 43,
+            "Revealed": false,
+            "Hint": false,
             "CharLength": 6
+        },
+        {
+            "Content": "said.",
+            "id": 44,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 5
         }
     ]
 ]
