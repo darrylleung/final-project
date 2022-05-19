@@ -13,7 +13,7 @@ export default function App() {
     const [filteredPuzzle, setFilteredPuzzle] = useState();
     const [guesses, setGuesses] = useState([]);
     const [values, setValues] = useState();
-    const [searchTerm, setSearchterm] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
     const [hints, setHints] = useState([]);
     const [unrevealedWords, setUnrevealedWords] = useState();
     const [numOfGuesses, setNumOfGuesses] = useState([]);
@@ -23,7 +23,7 @@ export default function App() {
     const [correctGuesses, setCorrectGuesses] = useState([]);
     const [menuIsVisible, setMenuIsVisible] = useState(false);
     const textInput = useRef();
-    const score = [];
+    // const score = [];
 
     useEffect(() => {
         (async () => {
@@ -64,7 +64,7 @@ export default function App() {
             ...values,
             [target.name]: target.value.trim(),
         });
-        setSearchterm(target.value);
+        setSearchTerm(target.value);
     };
 
     const handleSubmit = (e) => {
@@ -118,7 +118,7 @@ export default function App() {
         }
 
         textInput.current.focus();
-        setSearchterm("");
+        setSearchTerm("");
     };
 
     const handleHint = (e) => {

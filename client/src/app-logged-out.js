@@ -14,7 +14,7 @@ export default function AppLoggedOut() {
     const [filteredPuzzle, setFilteredPuzzle] = useState();
     const [guesses, setGuesses] = useState([]);
     const [values, setValues] = useState();
-    const [searchTerm, setSearchterm] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
     const [hints, setHints] = useState([]);
     const [unrevealedWords, setUnrevealedWords] = useState();
     const [numOfGuesses, setNumOfGuesses] = useState([]);
@@ -28,7 +28,7 @@ export default function AppLoggedOut() {
         (async () => {
             const res = await fetch("/start");
             const data = await res.json();
-            console.log("data: ", data);
+            // console.log("data: ", data);
             setPuzzle(data);
             dispatch(loadGameState(data));
             setFilteredPuzzle(data.filter((data, index) => index !== 0));
@@ -63,7 +63,7 @@ export default function AppLoggedOut() {
             ...values,
             [target.name]: target.value.trim(),
         });
-        setSearchterm(target.value);
+        setSearchTerm(target.value);
     };
 
     const handleSubmit = (e) => {
@@ -117,7 +117,7 @@ export default function AppLoggedOut() {
         }
 
         textInput.current.focus();
-        setSearchterm("");
+        setSearchTerm("");
     };
 
     const handleHint = (e) => {

@@ -1,0 +1,258 @@
+[
+    [
+        {
+            "web_url": "https://www.nytimes.com/1991/05/29/sports/sports-people-baseball-robinson-pursues-the-executive-track.html",
+            "lead_paragraph": "FRANK ROBINSON, dismissed as the Baltimore Orioles' manager last week, said yesterday that he would probably accept a job as the team's assistant general manager with the goal of becoming a major league general manager.",
+            "headline": "Robinson Pursues The Executive Track",
+            "byline": "",
+            "pub_date": "1991-05-29T05:00:00+0000",
+            "news_desk": "Sports Desk",
+            "section": "Sports"
+        },
+        {
+            "Content": "FRANK",
+            "id": 0,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "ROBINSON,",
+            "id": 1,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "dismissed",
+            "id": 2,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "as",
+            "id": 3,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "the",
+            "id": 4,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "Baltimore",
+            "id": 5,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "Orioles'",
+            "id": 6,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "manager",
+            "id": 7,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "last",
+            "id": 8,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "week,",
+            "id": 9,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "said",
+            "id": 10,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "yesterday",
+            "id": 11,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "that",
+            "id": 12,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "he",
+            "id": 13,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "would",
+            "id": 14,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "probably",
+            "id": 15,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "accept",
+            "id": 16,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "a",
+            "id": 17,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 1
+        },
+        {
+            "Content": "job",
+            "id": 18,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "as",
+            "id": 19,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "the",
+            "id": 20,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "team's",
+            "id": 21,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "assistant",
+            "id": 22,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 9
+        },
+        {
+            "Content": "general",
+            "id": 23,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "manager",
+            "id": 24,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "with",
+            "id": 25,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "the",
+            "id": 26,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "goal",
+            "id": 27,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "of",
+            "id": 28,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 2
+        },
+        {
+            "Content": "becoming",
+            "id": 29,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 8
+        },
+        {
+            "Content": "a",
+            "id": 30,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 1
+        },
+        {
+            "Content": "major",
+            "id": 31,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "league",
+            "id": 32,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 6
+        },
+        {
+            "Content": "general",
+            "id": 33,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 7
+        },
+        {
+            "Content": "manager.",
+            "id": 34,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 8
+        }
+    ]
+]
