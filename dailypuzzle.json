@@ -1,328 +1,195 @@
 [
     [
         {
-            "web_url": "https://www.nytimes.com/1997/08/18/nyregion/rescue-boat-kills-woman-thrown-in-water-by-storm.html",
-            "lead_paragraph": "A Long Island couple who were new to sailing went overboard when their boat capsized in a sudden squall Saturday evening, and the woman was killed when a powerboat speeding to the rescue caught her in the 22-inch blades of its propeller, the police said.",
-            "headline": "Rescue Boat Kills Woman Thrown in Water by Storm",
-            "byline": "By David M. Halbfinger",
-            "pub_date": "1997-08-18T05:00:00+0000",
+            "web_url": "https://www.nytimes.com/2002/05/21/nyregion/quotation-of-the-day-142514.html",
+            "lead_paragraph": "''I see people are still buying cars, still making home improvements. Things can't be that bad if so many people are driving these big, fancy S.U.V.'s.''",
+            "headline": "QUOTATION OF THE DAY",
+            "byline": "",
+            "pub_date": "2002-05-21T05:00:00+0000",
             "news_desk": "Metropolitan Desk",
             "section": "New York"
         },
         {
-            "Content": "A",
+            "Content": "''I",
             "id": 0,
-            "Revealed": false,
+            "Revealed": true,
             "Hint": false,
-            "CharLength": 1
+            "CharLength": 3
         },
         {
-            "Content": "Long",
+            "Content": "see",
             "id": 1,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 4
+            "CharLength": 3
         },
         {
-            "Content": "Island",
+            "Content": "people",
             "id": 2,
             "Revealed": false,
             "Hint": false,
             "CharLength": 6
         },
         {
-            "Content": "couple",
+            "Content": "are",
             "id": 3,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "still",
+            "id": 4,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "buying",
+            "id": 5,
             "Revealed": false,
             "Hint": false,
             "CharLength": 6
         },
         {
-            "Content": "who",
-            "id": 4,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "were",
-            "id": 5,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 4
-        },
-        {
-            "Content": "new",
+            "Content": "cars,",
             "id": 6,
-            "Revealed": false,
+            "Revealed": true,
             "Hint": false,
-            "CharLength": 3
+            "CharLength": 5
         },
         {
-            "Content": "to",
+            "Content": "still",
             "id": 7,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 2
+            "CharLength": 5
         },
         {
-            "Content": "sailing",
+            "Content": "making",
             "id": 8,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 7
+            "CharLength": 6
         },
         {
-            "Content": "went",
+            "Content": "home",
             "id": 9,
             "Revealed": false,
             "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "overboard",
+            "Content": "improvements.",
             "id": 10,
-            "Revealed": false,
+            "Revealed": true,
             "Hint": false,
-            "CharLength": 9
+            "CharLength": 13
         },
         {
-            "Content": "when",
+            "Content": "Things",
             "id": 11,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 4
+            "CharLength": 6
         },
         {
-            "Content": "their",
+            "Content": "can't",
             "id": 12,
-            "Revealed": false,
+            "Revealed": true,
             "Hint": false,
             "CharLength": 5
         },
         {
-            "Content": "boat",
+            "Content": "be",
             "id": 13,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 4
+            "CharLength": 2
         },
         {
-            "Content": "capsized",
+            "Content": "that",
             "id": 14,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 8
+            "CharLength": 4
         },
         {
-            "Content": "in",
+            "Content": "bad",
             "id": 15,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 3
+        },
+        {
+            "Content": "if",
+            "id": 16,
             "Revealed": false,
             "Hint": false,
             "CharLength": 2
         },
         {
-            "Content": "a",
-            "id": 16,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 1
-        },
-        {
-            "Content": "sudden",
+            "Content": "so",
             "id": 17,
             "Revealed": false,
             "Hint": false,
-            "CharLength": 6
+            "CharLength": 2
         },
         {
-            "Content": "squall",
+            "Content": "many",
             "id": 18,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 6
-        },
-        {
-            "Content": "Saturday",
-            "id": 19,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 8
-        },
-        {
-            "Content": "evening,",
-            "id": 20,
-            "Revealed": true,
-            "Hint": false,
-            "CharLength": 8
-        },
-        {
-            "Content": "and",
-            "id": 21,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "the",
-            "id": 22,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "woman",
-            "id": 23,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 5
-        },
-        {
-            "Content": "was",
-            "id": 24,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "killed",
-            "id": 25,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 6
-        },
-        {
-            "Content": "when",
-            "id": 26,
             "Revealed": false,
             "Hint": false,
             "CharLength": 4
         },
         {
-            "Content": "a",
-            "id": 27,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 1
-        },
-        {
-            "Content": "powerboat",
-            "id": 28,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 9
-        },
-        {
-            "Content": "speeding",
-            "id": 29,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 8
-        },
-        {
-            "Content": "to",
-            "id": 30,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 2
-        },
-        {
-            "Content": "the",
-            "id": 31,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "rescue",
-            "id": 32,
+            "Content": "people",
+            "id": 19,
             "Revealed": false,
             "Hint": false,
             "CharLength": 6
         },
         {
-            "Content": "caught",
-            "id": 33,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 6
-        },
-        {
-            "Content": "her",
-            "id": 34,
+            "Content": "are",
+            "id": 20,
             "Revealed": false,
             "Hint": false,
             "CharLength": 3
         },
         {
-            "Content": "in",
-            "id": 35,
+            "Content": "driving",
+            "id": 21,
             "Revealed": false,
-            "Hint": false,
-            "CharLength": 2
-        },
-        {
-            "Content": "the",
-            "id": 36,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "22-inch",
-            "id": 37,
-            "Revealed": true,
             "Hint": false,
             "CharLength": 7
         },
         {
-            "Content": "blades",
-            "id": 38,
+            "Content": "these",
+            "id": 22,
             "Revealed": false,
-            "Hint": false,
-            "CharLength": 6
-        },
-        {
-            "Content": "of",
-            "id": 39,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 2
-        },
-        {
-            "Content": "its",
-            "id": 40,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "propeller,",
-            "id": 41,
-            "Revealed": true,
-            "Hint": false,
-            "CharLength": 10
-        },
-        {
-            "Content": "the",
-            "id": 42,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 3
-        },
-        {
-            "Content": "police",
-            "id": 43,
-            "Revealed": false,
-            "Hint": false,
-            "CharLength": 6
-        },
-        {
-            "Content": "said.",
-            "id": 44,
-            "Revealed": true,
             "Hint": false,
             "CharLength": 5
+        },
+        {
+            "Content": "big,",
+            "id": 23,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 4
+        },
+        {
+            "Content": "fancy",
+            "id": 24,
+            "Revealed": false,
+            "Hint": false,
+            "CharLength": 5
+        },
+        {
+            "Content": "S.U.V.'s.''",
+            "id": 25,
+            "Revealed": true,
+            "Hint": false,
+            "CharLength": 11
         }
     ]
 ]

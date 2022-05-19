@@ -6,6 +6,7 @@ import Puzzle from "./puzzle";
 import MenuButton from "./menubutton";
 import Scorecard from "./scorecard";
 import Menu from "./menu-logged-out";
+import BaffleTest from "./baffletest";
 
 export default function AppLoggedOut() {
     const dispatch = useDispatch();
@@ -188,6 +189,19 @@ export default function AppLoggedOut() {
                 </div>
                 <Route exact path="/">
                     <Puzzle
+                        puzzle={puzzle}
+                        hints={hints}
+                        filteredPuzzle={filteredPuzzle}
+                        handleSubmit={handleSubmit}
+                        searchTerm={searchTerm}
+                        handleChange={handleChange}
+                        handleHint={handleHint}
+                        guesses={guesses}
+                        textInput={textInput}
+                    />
+                </Route>
+                <Route exact path="/test">
+                    <BaffleTest
                         puzzle={puzzle}
                         hints={hints}
                         filteredPuzzle={filteredPuzzle}
