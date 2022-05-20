@@ -1,4 +1,4 @@
-const cron = require("node-cron");
+// const cron = require("node-cron");
 const fs = require("fs");
 const axios = require("axios");
 const data = require("../json/archive.json");
@@ -6,7 +6,6 @@ const newArticle = [data[0]];
 const puzzleData = require("../json/dailypuzzle.json");
 const dailyPuzzle = [puzzleData[0]];
 let arr = [];
-
 
 let apiSecret;
 if (process.env.NODE_ENV == "production") {
@@ -72,56 +71,52 @@ function createPuzzle() {
     return newPuzzle;
 }
 
-cron.schedule(
-    "0 0 0 * * *",
-    () => {
-        console.log("Updated every day, Berlin Time!");
-        const randomYear = () => {
-            return Math.floor(Math.random() * (2022 - 1989) + 1989);
-        };
-        const randomMonth = () => {
-            return Math.floor(Math.random() * (12 - 1) + 1);
-        };
-        axios
-            .get(
-                `https://api.nytimes.com/svc/archive/v1/${randomYear()}/${randomMonth()}.json?api-key=${apiSecret}`
-            )
-            .then((response) => {
-                // console.log("response: ", response.data.response.docs);
-                console.log("Archive updated");
+function updateDailyPuzzle() {
+    console.log("Updated every day, Berlin Time!");
+    const randomYear = () => {
+        return Math.floor(Math.random() * (2022 - 1989) + 1989);
+    };
+    const randomMonth = () => {
+        return Math.floor(Math.random() * (12 - 1) + 1);
+    };
+    axios
+        .get(
+            `https://api.nytimes.com/svc/archive/v1/${randomYear()}/${randomMonth()}.json?api-key=${apiSecret}`
+        )
+        .then((response) => {
+            // console.log("response: ", response.data.response.docs);
+            console.log("Archive updated");
 
-                // in the future, possibly remove loop altogether and randomly generate an index number, random year, and random month to pull a single new story every 24 hours.
+            // in the future, possibly remove loop altogether and randomly generate an index number, random year, and random month to pull a single new story every 24 hours.
 
-                const nytimesArray = response.data.response.docs;
-                const archive = [];
+            const nytimesArray = response.data.response.docs;
+            const archive = [];
 
-                for (let i = 0; i < nytimesArray.length; i++) {
-                    let myNewObj = {};
-                    myNewObj.web_url = nytimesArray[i].web_url;
-                    myNewObj.lead_paragraph = nytimesArray[i].lead_paragraph;
-                    myNewObj.headline = nytimesArray[i].headline.main;
-                    myNewObj.byline = nytimesArray[i].byline.original;
-                    myNewObj.pub_date = nytimesArray[i].pub_date;
-                    myNewObj.news_desk = nytimesArray[i].news_desk;
-                    myNewObj.section = nytimesArray[i].section_name;
-                    archive.push(myNewObj);
-                }
+            for (let i = 0; i < nytimesArray.length; i++) {
+                let myNewObj = {};
+                myNewObj.web_url = nytimesArray[i].web_url;
+                myNewObj.lead_paragraph = nytimesArray[i].lead_paragraph;
+                myNewObj.headline = nytimesArray[i].headline.main;
+                myNewObj.byline = nytimesArray[i].byline.original;
+                myNewObj.pub_date = nytimesArray[i].pub_date;
+                myNewObj.news_desk = nytimesArray[i].news_desk;
+                myNewObj.section = nytimesArray[i].section_name;
+                archive.push(myNewObj);
+            }
 
-                fs.writeFileSync(
-                    "json/archive.json",
-                    JSON.stringify(archive, null, 4)
-                );
+            fs.writeFileSync(
+                "json/archive.json",
+                JSON.stringify(archive, null, 4)
+            );
 
-                dailyPuzzle.pop();
-                dailyPuzzle.push(createPuzzle());
+            dailyPuzzle.pop();
+            dailyPuzzle.push(createPuzzle());
 
-                fs.writeFileSync(
-                    "json/dailypuzzle.json",
-                    JSON.stringify(dailyPuzzle, null, 4)
-                );
-            });
-    },
-    {
-        timezone: "Europe/Berlin",
-    }
-);
+            fs.writeFileSync(
+                "json/dailypuzzle.json",
+                JSON.stringify(dailyPuzzle, null, 4)
+            );
+        });
+}
+
+updateDailyPuzzle();
